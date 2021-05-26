@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #232323;
+        }
+
+        #texto {
+            text-align: center;
+            width: 100%;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        Para que time grande do estado de São Paulo você torce:
+        <br>
+        <select id="timeEscolhido">
+            <option value="Valor invalido">-</option>
+            <option value="Corinthians">Corinthians</option>
+            <option value="Palmeiras">Palmeiras</option>
+            <option value="Santos">Santos</option>
+            <option value="São Paulo">São Paulo</option>''
+        </select>
+        <br>
+        <button onclick="sobreoTime()">Fale sobre seu time</button>
+        <br>
+        <br>
+        <div id="texto"></div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    texto.innerHTML = "Time ainda não escolhido!";
+
+    function sobreoTime() {
+        var time = timeEscolhido.value;
+
+        if (time == 'Corinthians'){
+            texto.innerHTML = '<span style="color: white; background-color: black;">Salve o Corinthians</span>';
+            texto.style.backgroundColor = "black";
+
+        }else if (time == 'Palmeiras'){
+            texto.innerHTML = '<span style="color: white; background-color: green;">Salve o alviverde imponente</span>';
+            texto.style.backgroundColor = "green";
+
+        }else if (time == 'Santos'){
+            texto.innerHTML = '<span style="color: black;">Agora quem dá a bola é o Santos</span>';
+            texto.style.backgroundColor = "white";
+
+        }else if (time == 'São Paulo'){
+            texto.innerHTML = '<span style="color: red; background-color: black;">Salve o Tricolor paulista</span>'
+            texto.style.backgroundColor = 'black';
+        }else{
+            texto.innerHTML = 'Time invalido!'
+            texto.style.backgroundColor = 'white';
+        }
+    }
+
+</script>
+
+<!-- 3. Crie um programa o qual:
+a) Pergunte numa combo, qual time grande São Paulo o usuáro torce;
+b) Ao clicar em "Fale sobre esse time", exiba abaixo:
+   "Salve o Corinthians" com fundo preto e letra branca, se for Corinthians
+   "Salve o alviverde imponente" com fundo verde e letra branca, se for Palmeiras
+   "Agora que dá a bola é o Santos" com fundo branco e letra preta, se for Santos
+   "Salve o Tricolor paulista" com fundo preto e letra vermelha, se for São Paulo -->

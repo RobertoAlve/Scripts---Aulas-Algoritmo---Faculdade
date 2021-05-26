@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<bod>
+    <h1><span style="color: green;">Brasil</span> X <span style="color: red;">Alemanha</span></h1>
+    <div style="float: left; width: 15vw;">
+    <button onclick="marca_golb()" style="width: 20vh; height: 5vh">Gol do Brasil</button>
+    </div>
+    <div>
+    <button onclick="marca_gola()" style="width: 20vh; height: 5vh;">Gol do Alemanha</button>
+    </div>
+    <div style= "float: left; width: 7vw; height: 1vh;"></div>
+    <button onclick="recomeçar()" style="width: 20vh; height: 4vh">Recomeçar Partida</button><br>
+    <br><b>Tempo real do jogo</b><br><br>
+    <div id="gol_brasil" style="background-color: black; float: left; height: 100vh; width: 13vw"></div>
+    <div id="gol_ale" style="background-color: black; height: 100vh; width: 26vw"></div><br>
+</body>
+
+</html>
+
+<script>
+    function marca_golb() {
+        gol_brasil.innerHTML += "<span style='background-color: yellow; color: green'>É goooolll do Brasil!!!<br></span>";
+    }
+
+    function marca_gola() {
+        gol_ale.innerHTML += "<span style='background-color: red; color: yellow'>É goooolll da Alemanha!!!<br></span>";
+    }
+
+    function recomeçar() {
+        gol_brasil.innerHTML = "";
+        gol_ale.innerHTML = "";
+    }
+</script>

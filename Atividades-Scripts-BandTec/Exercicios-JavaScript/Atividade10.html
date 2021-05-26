@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o Número que deseja a tabuada: <input id="nt">
+    <br>
+    <button onclick="tabuada()">Tabuada</button>
+    <br><br>
+    <span id="ct"></span>
+</body>
+
+</html>
+
+<script>
+    function tabuada(){
+        ct.innerHTML = nt.value * 1 + "<br>" +
+                       nt.value * 2 + "<br>" + 
+                       nt.value * 3 + "<br>" +
+                       nt.value * 4 + "<br>" +
+                       nt.value * 5 + "<br>" +
+                       nt.value * 6 + "<br>" +
+                       nt.value * 7 + "<br>" +
+                       nt.value * 8 + "<br>" +
+                       nt.value * 9;  
+        ct.style.color = "white";
+        ct.style.backgroundColor = "black";
+        // Também podemos colocalar o valores em (`${}`)
+    }
+</script>

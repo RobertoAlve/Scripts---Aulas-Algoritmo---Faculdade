@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a nota do aluno: <input id="nota_aluno">
+    <br>
+    <button onclick="classificar()">Classificar Aluno</button> 
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+
+    function classificar() {
+        var nota = Number(nota_aluno.value);
+
+        if (nota < 0){
+            texto.innerHTML = `Nota ${nota} é inválida!`;
+        }else if (nota < 5) {
+            texto.innerHTML = '<span style="color: red;">Aluno precisa de muita ajuda</span>';
+        }else if (nota <= 7){
+            texto.innerHTML = '<span style="color: orange;">Aluno na média</span>';
+        }else if (nota <= 9.5){
+            texto.innerHTML = '<span style="color: green">Aluno acima da média</span>';
+        }else if (nota <= 10){
+            texto.innerHTML = '<span style="color: blue">Aluno fora da curva</span>';
+        }else{
+            texto.innerHTML = `Nota ${nota} é inválida!`;
+        }
+    }
+
+</script>
+
+<!-- 2. Melhore o programa da questão anterior de tal forma que:
+a) Caso a nota digitada for menor que 0 ou maior que 10, exiba a mensagem
+    "Nota X é inválida!" 
+Obs: X é a nota informada.
+Obs²: Texto sempre na cor preta. -->

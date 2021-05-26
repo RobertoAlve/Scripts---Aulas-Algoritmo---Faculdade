@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite aqui o filme: <input type="text" id="input_filme">
+    <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+</body>
+
+</html>
+
+<script>
+    let filmes = [];
+
+    function cadastrar() {
+        let filme = input_filme.value;
+        filmes.push(filme);
+
+        texto.innerHTML = "";
+        for(let contador = 0; contador < filmes.length; contador++){
+            texto.innerHTML += `${filmes[contador]}<br>`;
+        }
+
+    }
+</script>
+
+<!-- 3. Crie um programa no qual o usuário informa os nomes dos filmes que mais gosta. Ele digita e clica em "Cadastrar".
+Na medida em que vai cadastrando, os filmes vão aparecendo um abaixo do outro abaixo do botão. -->

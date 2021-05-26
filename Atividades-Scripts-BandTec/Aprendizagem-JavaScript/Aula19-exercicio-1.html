@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="filmes_marvel">
+        <option id="avengers" value="filme_avengers">The Avengers</option>
+        <option id="ironMan" value="filme_iron_man">Iron Man</option>
+        <option id="black_panther" value="blackPanther">Black Panther</option>
+    </select>
+    <button onclick="theAvengers()">Ver nota</button>
+</body>
+</html>
+
+<script>
+    function theAvengers() {
+        var filme = filmes_marvel.value;
+        var filmeAvengers = avengers.innerHTML;
+        var filmeIronman = ironMan.innerHTML;
+        var filmeBlackpanther = black_panther.innerHTML;
+        
+        if (filme == "filme_avengers") {
+            alert(`O filme ${filmeAvengers} tem uma nota 8 no IMDB!`);
+        }
+
+        if (filme == "filme_iron_man") {
+            alert(`O filme ${filmeIronman} tem uma nota de 9 no IMDB!`);
+        }
+
+        if (filme == "blackPanther"){
+            alert(`O filme ${filmeBlackpanther} tem uma nota de 10 no IMDB`);
+        }
+    }
+
+</script>

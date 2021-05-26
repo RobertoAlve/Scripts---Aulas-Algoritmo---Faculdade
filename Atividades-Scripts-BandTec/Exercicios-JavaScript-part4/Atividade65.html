@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Quanto tempo você trabalhou para o pai da sua pretendente: <input id="in_tempo_trabalho">
+    <br>
+    Qual a quantidade de Kilos que suas plantações de trigo rendem: <input id="in_kilos_trigo">
+    <br>
+    Qual a quantidade de dias que você faltou no trabalho por conta de doenças: <input id="in_faltas">
+    <br> 
+    <button onclick="match()">Deu match?</button>
+    <div id="texto"></div>
+    <br>
+    <img src="" id="imagem">
+
+</body>
+</html>
+
+<script>
+
+    function match() {
+        var tempoTrabalho = Number(in_tempo_trabalho.value);
+        var kilosTrigos = Number(in_kilos_trigo.value);
+        var faltasTrabalho = Number(in_faltas.value)
+
+        if (tempoTrabalho >= 5 && kilosTrigos >= 300 && faltasTrabalho <=5){
+            texto.innerHTML = "Minha filha será sua!";
+            imagem.src = "https://www.buffettulipas.com.br/wp-content/uploads/2019/09/noivas_vestido_branco_neve_ou_off_white.jpg";
+        }else{
+            texto.innerHTML = "Deu ruim! Trabalhe mais 2 anos";
+        }
+    }
+
+</script>
+
+<!-- 8. Milhares de anos antes de Cristo não existia Tinder, Badoo e afins para se conseguir um relacionamento, seja ele breve ou duradouro. 
+    Para um pai permitir que sua filha se relacionasse com sua filha, as vezes colocava condições insanas. Um deles, segundo consta na Bíblia 
+    cristã, exigiu 14 anos de trabalho para um rapaz. Vamos ajudar um pai dessa época a verificar se um homem pode casar com sua filha.
+
+a) Solicite o tempo, em anos, que ele trabalhou para o pai da pretendente
+b) Solicite a quantidade, em kilos, de trigo, que suas plantações renderam
+c) Solicite a quantidade em dias que ele falou ao trabalho por estar doente
+d) Ao clicar no botão "Deu match?", podem aparecer as seguintes coisas abaixo desse botão:
+    A frase "Minha filha será sua!" e a foto de uma noiva. Somente se o homem trabalhou pelo menos 5 anos, se seu trabalho rendeu pelo menos
+    300 kilos de trigo e se faltou até 5 dias de trabalho.
+    A frase "Deu ruim! Trabalhe mais 2 anos" e a foto de um homem representando um pai bravo, caso contrário. -->

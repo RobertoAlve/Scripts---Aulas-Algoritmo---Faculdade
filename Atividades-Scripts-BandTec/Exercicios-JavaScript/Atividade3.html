@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="carnes" style="background-color: red; color: white"></div>
+    <div id="legume" style="background-color: black; color: yellow"></div>
+    <div id="fruta" style="background-color:white; color: green"></div>
+    <button onclick="carne()" style="background:red; color: white">Carnes</button>
+    <button onclick="legumes()" style="background-color: black; color: yellow;">Legumes</button>
+    <button onclick="frutas()" style="background-color: white; color: green;">Frutas</button>
+</body>
+
+</html>
+
+<Script>
+    function carne() {
+        carnes.innerHTML = "Gosto muito de carne, um churrasco gaúcho então!! Nossa senhora.";
+        legume.innerHTML = "";
+        fruta.innerHTML = "";
+        document.title = "Último clique: Botão de Carnes";
+    }
+
+    function legumes() {
+        legume.innerHTML = "Legumes já não gosto tanto, só gosto de cenoura.";
+        carnes.innerHTML = "";
+        fruta.innerHTML = "";
+        document.title = "Último clique: Botão de Legumes";
+    }
+
+    function frutas() {
+        fruta.innerHTML = "Adoro frutas, minhas preferidas são maçã verde, melancia, uva e morango";
+        carnes.innerHTML = "";
+        legume.innerHTML = "";
+        document.title = "Último clique: Botão de Frutas";
+    }
+</Script>

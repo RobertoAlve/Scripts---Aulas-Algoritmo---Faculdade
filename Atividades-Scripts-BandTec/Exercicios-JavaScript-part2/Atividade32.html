@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a frequência do aluno: <input id="in_frequencia_aluno">
+    <br>
+    <button onclick="analiseFrequencia()">Analisar Frequência</button>
+    <br>
+    <div id="texto"></div>
+    <!--A imagem pode ser adicionada por um tag <img> em vez de um div, span, etc-->
+    <!-- <img id="imagem" src=""> -->
+</body>
+</html>
+
+<script>
+    function analiseFrequencia() {
+        var frequenciaAluno = Number(in_frequencia_aluno.value);
+        var imagemTurista = '<img src="https://image.freepik.com/fotos-gratis/turista-apontando-para-cima_1368-7017.jpg">';
+        var imagemAluno = '<img src="https://img.quizur.com/f/img5d12b3c6048bf2.44511546.jpg?lastEdited=1561506771">';
+
+        if (frequenciaAluno < 50) {
+            texto.innerHTML = imagemTurista;
+            // Ou imagem.src = "https://image.freepik.com/fotos-gratis/turista-apontando-para-cima_1368-7017.jpg";
+        
+        } else {
+            texto.innerHTML = imagemAluno;
+        }
+    }
+</script>

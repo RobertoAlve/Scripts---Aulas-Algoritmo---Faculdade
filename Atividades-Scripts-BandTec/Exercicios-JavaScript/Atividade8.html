@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite a quantidade de votos do Zé Buduia: <input id="qvB">
+    <br>
+    Digite a quantidade de votos do Maria Bigodenha: <input id="qvM">
+    <br>
+    Digite a quantidade de votos Brancos: <input id="qvBr">
+    <br>
+    Digite a quantidade de votos Nulos: <input id="qvN">
+    <br>
+    <br>
+    <button onclick="resultado()">Resultado da Eleição</button>
+    <br>
+    <br>
+    <span id="res"></span>
+</body>
+
+</html>
+
+<script>
+    function resultado() {
+        var soma_total = Number(qvB.value) + Number(qvM.value) + Number(qvBr.value) + Number(qvN.value);
+        var porZ = Number(qvB.value) * 100 / soma_total;
+        var porM = Number(qvM.value) * 100 / soma_total;
+        var inv = Number(qvBr.value) + Number(qvN.value);
+        var porI = inv * 100 / soma_total;
+        res.innerHTML = `<b>Total de Votos: </b>${soma_total}
+                          <br><b>Zé Ruela: </b>${porZ}% (${qvB.value} votos)
+                          <br><b>Maria Bigodenha: </b>${porM}% (${qvM.value} votos)
+                          <br><b>Inválidos: </b> ${porI}% ( ${inv} votos)`;
+    }
+</script>

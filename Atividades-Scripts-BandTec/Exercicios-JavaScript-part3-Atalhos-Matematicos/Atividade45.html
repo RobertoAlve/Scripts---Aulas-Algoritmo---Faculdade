@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantas pessoas estão contaminadas: <input id="cont_pessoas">
+    <br>
+    <button onclick="infectadasOntem()">Quantas pessoas infectadas ontem</button>
+    <br>
+    <div id="texto1"></div>
+    <br>
+    <button onclick="infectadasAmanha()">Quantas pessoas infectadas amanhã</button>
+    <br>
+    <div id="texto2"></div>
+    <br>
+    <button onclick="infectadasMes()">Quantas pessoas infectadas daqui 1 mês</button>
+    <br>
+    <div id="texto3"></div>
+</body>
+</html>
+
+<script>
+
+    var contDias = 35;
+
+    function infectadasOntem() {
+        var contPessoas = Number(cont_pessoas.value);
+        var contOntem = contPessoas - contDias;
+
+        texto1.innerHTML = `Ontem haviam ${contOntem} pessoas infectadas`;
+
+    }
+
+    function infectadasAmanha() {
+        var contPessoas = Number(cont_pessoas.value);
+        var contAmanha = contPessoas + contDias;
+
+        texto2.innerHTML = `Amanhã haverão ${contAmanha} pessoas infectadas`;
+    }
+
+    function infectadasMes() {
+        var contPessoas = Number(cont_pessoas.value);
+        var contMes = contDias * 30 + contPessoas;
+
+        texto3.innerHTML = `Daqui a 1 mês haverão ${contMes} pessoas infectadas`;
+
+    }
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Informe a nota do aluno: <input id="in_nota">
+    <br>
+    Informe a frequência do aluno: <input id="in_frequencia">
+    <br>
+    <button onclick="verificarSituação()">Verificar Situação</button>
+</body>
+
+</html>
+
+<script>
+
+    /*  Se o aluno tiver nota >= 6 
+            Se o aluno tiver frequencia >= 70
+            Mostrar: "Parabéns aprovado"
+    
+        Se o Aluno não atender os requisitos
+            Mostrar: "Infelizmente Reprovado"
+    */
+
+    function verificarSituação() {
+        var nota = Number(in_nota.value);
+        var frequencia = Number(in_frequencia.value);
+
+        if (nota >= 6 && frequencia >= 70) {
+            alert("Parabéns Aprovado");
+        } else {
+            alert("Infelizmente Reprovado");
+        }
+
+    }
+
+</script>

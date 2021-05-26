@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o primeiro número da progressão: <input id="prim_pro">
+    <br>
+    Qual a razão: <input id="razao">
+    <br>
+    Qual número da progressão deseja ver: <input id="ver_prog">
+    <br>
+    <button onclick="pg()">Calcular PG</button>
+    <br> 
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+    function pg() {
+        var numero_progressao = Number(prim_pro.value);
+        var razaoP = Number(razao.value);
+        var verP = Number(ver_prog.value);
+        var progressao = numero_progressao * razaoP ** (verP - 1);
+
+        texto.innerHTML = `O ${verP}º termo nessa PG será ${progressao}`;
+    }
+</script>

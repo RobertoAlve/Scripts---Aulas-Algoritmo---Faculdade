@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite aqui: <input type="text" id="input_user">
+    <br>
+    <button onclick="addFruta()">Adicionar Fruta</button>
+    <button onclick="verNotaFiscal()">Ver nota fiscal</button>
+    <br>
+    <div id="texto"></div>
+    <div style="display: none" id="textoFiscal"></div>
+</body>
+
+</html>
+
+<script>
+    let frutas = [];
+
+    function addFruta() {
+        let inputUser = input_user.value;
+        frutas.push(inputUser);
+
+        texto.innerHTML += `<br>${inputUser}`;
+
+        textoFiscal.style.display = "none";
+        texto.style.display = "block";
+    }
+
+    function verNotaFiscal() {
+        texto.style.display = "none";
+        textoFiscal.style.display = "block"
+
+        textoFiscal.innerHTML = "";
+
+        textoFiscal.innerHTML += `<br>
+            Valor total: ${frutas.length * 2.50}<br>
+            Quantidade de frutas: ${frutas.length}<br>
+            Primeira fruta: ${frutas[0]}<br>
+            Ultima fruta: ${frutas[frutas.length - 1]}<br>
+
+
+        `;
+    }
+</script>
+
+<!-- 1) Crie um programa em HTML/JS que:
+
+a) Tenha um input;
+b) Tenha um botão "Adicionar fruta", que:
+    a.1) Adiciona frutas á uma lista (que aparece na tela, separe-as por <br>);
+c) Tenha um botão "Ver nota fiscal" que: 
+    c.1) Esconde a lista de frutas e mostra o valor total da lista (2,50 cada item);
+    c.2) Mostra a quantidade de itens na lista (não os itens);
+    c.3) Mostra a primeira fruta adiciona na lista;
+    c.4) Mostra a última fruta adicionada na lista;
+ -->

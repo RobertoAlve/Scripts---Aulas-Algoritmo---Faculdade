@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Primeiro número: <input id="primeiro_numero">
+    <br>
+    Segundo número: <input id="segundo_numero">
+    <br>
+    <button onclick="calcular()">Divisão</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        // toFixed();
+        var primeiroNumero = Number(primeiro_numero.value);
+        var segundoNumero = Number(segundo_numero.value);
+        var divisao = primeiroNumero / segundoNumero;
+
+        texto.innerHTML = `O resultado de ${primeiroNumero} divido por ${segundoNumero} é igual á ${divisao.toFixed(2)}!<br><br>`;
+
+        if (divisao > 10) {
+            texto.innerHTML += `Uau, é um número gigante!`;
+
+        }else{
+            texto.innerHTML += `Uau.... que número pequeno`;
+        }
+
+    }
+</script>
+</body>
+</html>

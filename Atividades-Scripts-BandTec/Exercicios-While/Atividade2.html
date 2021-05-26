@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite a frase aqui: <input type="text" id="input_frase">
+    <button onclick="frase()">Repetir frase (X7)</button>
+    <br>
+    <div id="texto"></div>
+</body>
+
+</html>
+
+<script>
+    function frase() {
+        let i = 0;
+        let frase = input_frase.value;
+
+        if (frase != "") {
+            while (++i <= 7) {
+                texto.innerHTML += `${frase}<br>`;
+            }
+        }else{
+            alert("Mas qual é a frase?");
+        }
+    }
+</script>
+
+<!-- 2. Faça uma versão melhorada do programa anterior no qual:
+a) O usuário digita a frase que será exibida 7 vezes
+b) Se não tiver digitado nada ao clicar, exiba um alert "Mas qual a frase?" e, claro, não exiba a frase na tela (visto que ela nem existe, afinal) -->

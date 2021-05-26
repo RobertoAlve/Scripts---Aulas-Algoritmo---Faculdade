@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><span style="color: green;">Brasil</span> X <span style="color: red;">Alemanha</span></h1>
+    <button onclick="marca_golb()" style="width: 20vh; height: 5vh">Gol do Brasil</button>
+    <button onclick="marca_gola()" style="width: 20vh; height: 5vh">Gol do Alemanha</button><br>
+    <b>Tempo real do jogo</b><br><br>
+      <span id="gol"></span>
+</body>
+
+</html>
+
+<script>
+    function marca_golb() {
+        gol.innerHTML += "É goooolll do Brasil!!!<br>";
+    }
+
+    function marca_gola() {
+        gol.innerHTML += "É goooolll da Alemanha!!!<br>";
+    }
+</script>

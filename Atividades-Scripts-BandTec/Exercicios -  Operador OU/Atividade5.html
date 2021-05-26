@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #imagem {
+            height: 400px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <select name="" id="arroz_usado">
+        <option value="Arroz integral">Arroz integral</option>
+        <option value="Arroz branco">Arroz branco</option>
+    </select>
+    <br>
+    Qual o tempo de cozimento em minutos: <input id="in_tempo_cozimento">
+    <br>
+    Qual a quantidade de sal usada em gramas: <input id="in_gramas_sal">
+    <br>
+    <button onclick="avaliarArroz()">Avaliar arroz</button>
+    <br>
+    <div id="texto"></div>
+    <br>
+    <img id="imagem">
+
+</body>
+
+</html>
+
+<script>
+
+    function avaliarArroz() {
+        var arrozUsado = arroz_usado.value;
+        var tempoCozimento = Number(in_tempo_cozimento.value);
+        var gramasSal = Number(in_gramas_sal.value);
+
+        if (arrozUsado == "Arroz branco" && tempoCozimento == 10 && gramasSal <= 10 || arrozUsado == "Arroz integral" && tempoCozimento == 20 && gramasSal <= 15) {
+            texto.innerHTML = "Arroz perfeito";
+
+            if (arrozUsado == "Arroz branco") {
+                imagem.src = "https://img.itdg.com.br/tdg/images/recipes/000/000/770/323683/323683_original.jpg?mode=crop&width=710&height=400"; 7
+            }
+
+            if (arrozUsado == "Arroz integral") {
+                imagem.src = "https://www.cozinhatecnica.com/wp-content/uploads/2019/05/receita-de-arroz-integral-soltinho.jpg";
+            }
+
+        } else {
+            texto.innerHTML = "Seu arroz não está perfeito";
+            imagem.src = "https://noticiasdatv.uol.com.br/media/uploads/erick-jacquin-freezer-bronca-pesadelo-na-cozinha-reproducao-band-min.jpg";
+
+        }
+
+    }
+
+</script>
+
+<!-- 5 (desafio). Crie um programa em HTML/JS o qual:
+OBS: Use, necessariamente pelo menos um "ou" (||)
+a) Pergunte numa combo o tipo de arroz usado (integral ou branco)
+b) Pergunte o tempo de cozimento, em minutos
+c) Pergunte a quantidade de sal usada, em gramas
+d) Ao clicar em "Avaliar arroz", exiba, abaixo dele...
+    A frase "Arroz perfeito", caso:
+      Em caso de arroz branco, 10 minutos e até 10g de sal
+      Em caso de arroz integral, 20 minutos e até 15g de sal
+   A frase "Seu arroz não está perfeito", caso nenhum dos critérios anteriores tenha sido alcançado
+e) No caso de arroz perfeito, exiba também a imagem de um belo arroz, branco ou integral, conforme o tipo selecionado. 
+Caso contrário, exiba a cara do Jacquin bravo (aquele famoso meme), independe do tipo de arroz. -->

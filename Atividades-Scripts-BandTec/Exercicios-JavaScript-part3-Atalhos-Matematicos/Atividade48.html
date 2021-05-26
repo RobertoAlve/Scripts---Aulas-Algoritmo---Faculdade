@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="pao"></span><br>
+    <span id="carne"></span><br> 
+    <span id="soja"></span><br>
+    <span id="arroz"></span><br>
+    <span id="calorias"></span><br><br>
+    <button onclick="comerPao()">Comer um pão françes</button>
+    <button onclick="comerCarne()">Comer porção de carne bovina</button>
+    <button onclick="comerSoja()">Comer porção de carne de soja</button>
+    <button onclick="comerArroz()">Comer porção de arroz e feijão</button><br><br>
+    <button onclick="recomeçar()">Recomeçar</button>
+</body>
+</html>
+
+<script>
+
+    var clicksPao = 0;
+    var clicksCarne = 0;
+    var clicksSoja = 0;
+    var clicksArroz = 0;
+    var caloria = 0;
+
+    pao.innerHTML = "Porções de pão francês: <u>0</u>";
+    carne.innerHTML = "Porções de carne boniva: <u>0</u>";
+    soja.innerHTML = "Porções de carne de soja: <u>0</u>";
+    arroz.innerHTML = "Porções de arroz com feijão: <u>0</u>";
+    calorias.innerHTML = "<b>Total de calorias:</b> <u>0</u>";
+
+    function comerPao() {
+        ++clicksPao;
+        caloria = caloria + 50;
+
+        pao.innerHTML = `Porções de pão francês: <u>${clicksPao}</u>`;
+        calorias.innerHTML = `<b>Total de calorias:</b> <u>${caloria}</u>`;
+    }
+
+    function comerCarne() {
+        ++clicksCarne;
+        caloria = caloria + 100;
+
+        carne.innerHTML = `Porções de pão francês: <u>${clicksCarne}</u>`;
+        calorias.innerHTML = `<b>Total de calorias:</b> <u>${caloria}</u>`;
+    }
+
+    function comerSoja() {
+        ++clicksSoja;
+        caloria = caloria + 30;
+
+        soja.innerHTML = `Porções de pão francês: <u>${clicksSoja}</u>`;
+        calorias.innerHTML = `<b>Total de calorias:</b> <u>${caloria}</u>`;
+    }
+
+    function comerArroz() {
+        ++clicksArroz;
+        caloria = caloria + 120;
+
+        arroz.innerHTML = `Porções de pão francês: <u>${clicksArroz}</u>`;
+        calorias.innerHTML = `<b>Total de calorias:</b> <u>${caloria}</u>`;
+    }
+
+    function recomeçar() {
+        caloria = 0;
+
+        pao.innerHTML = "Porções de pão francês: <u>0</u>";
+        carne.innerHTML = "Porções de carne boniva: <u>0</u>";
+        soja.innerHTML = "Porções de carne de soja: <u>0</u>";
+        arroz.innerHTML = "Porções de arroz com feijão: <u>0</u>";
+        calorias.innerHTML = "<b>Total de calorias:</b> <u>0</u>";
+
+    }
+        
+
+</script>

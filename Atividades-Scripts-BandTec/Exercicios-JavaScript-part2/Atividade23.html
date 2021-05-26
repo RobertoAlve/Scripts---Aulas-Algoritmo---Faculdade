@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de kWh por mês: <input id="qtd_kWhmes">
+    <br>
+    <button onclick="calcularLuz()">Calcular conta de Luz</button>
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+    function calcularLuz() {
+        var valorluzPorkWh = 0.85;
+        var qtdKwhmes = Number(qtd_kWhmes.value);
+        var valorTotal = qtdKwhmes * valorluzPorkWh;
+
+        if (valorTotal < 100) {
+            var valorTotal = valorTotal * 0.9;
+        }
+
+        alert(`Valor da conta de Luz é de ${valorTotal}`)
+
+    }
+</script>

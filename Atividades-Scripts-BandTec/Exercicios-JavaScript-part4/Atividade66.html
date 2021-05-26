@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Numero de repetições: <input type="text" id="num_repetir">
+    <button onclick="frase()">Repetir frase</button>
+    <div id="texto"></div>
+
+</body>
+
+</html>
+
+<script>
+    function frase() {
+        var numRepetir = Number(num_repetir.value);
+        var i = 0;
+
+        if (numRepetir >= 2) {
+            while (i < numRepetir) {
+                texto.innerHTML += "Tá certo<br>";
+                i++;
+            }
+        } else if (numRepetir == 1) {
+            texto.innerHTML += "Tá certo<br>";
+        } else {
+            alert("Numero de repetições invalidos!!");
+        }
+    }
+</script>

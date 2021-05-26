@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+</head>
+<body>
+    <!-- Input para a entrada de quantidades de maçã -->
+    Digite a quantidade de maçãs: <input id="qtd_macas">
+    <br>
+    <!-- Botão que ao clickado chama a função finalizarCompra e a executa-->
+    <button onclick="finalizarCompra()">Finaliza compra</button>
+</body>
+</html>
+
+<script>
+
+    // Criação da função finalizar compra
+    function finalizarCompra() {
+
+        // variavél qtdMacas pega o valor do input qtd_macas e o tranforma em número
+        var qtdMacas = Number(qtd_macas.value);
+        
+        // variavél custoUnidade definida como 0.75
+        var custoUnidade = 0.75;
+        
+        // Comparação da quantidade de maçãs, se maior ou igual a 10 executa o if
+        if (qtdMacas >= 10) {
+            custoUnidade = 0.68;
+        } 
+
+        var totalCompra = qtdMacas * custoUnidade;
+            alert(`Total a pagar: ${totalCompra}`);
+            
+    }
+
+</script>

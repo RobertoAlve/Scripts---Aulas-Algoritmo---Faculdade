@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        img {
+            height: 200px;
+        }
+
+    </style>
+  
+</head>
+<body>
+    
+    <select id="meses" onchange="estacao()">
+        <option value="Inválido!">-</option>
+        <option value="Inverno">janeiro</option>
+        <option value="Inverno">Fevereiro</option>
+        <option value="Primavera">Março</option>
+        <option value="Primavera">Abril</option>
+        <option value="Primavera">Maio</option>
+        <option value="Verão">Junho</option>
+        <option value="Verão">Julho</option>
+        <option value="Verão">Agosto</option>
+        <option value="Outono">Setembro</option>
+        <option value="Outono">Outubro</option>
+        <option value="Outono">Novembro</option>
+        <option value="Inverno">Dezembro</option>
+    </select>
+    <br>
+    <br>
+    <div id="texto"></div>
+    <br>
+    <img id="imagem" src="">
+
+</body>
+</html>
+
+<script>
+
+    function estacao() {
+        var mes = meses.value;
+
+        if (mes == 'Inverno'){
+            texto.innerHTML = "Estação: Inverno"; 
+            imagem.src = "../img/inverno.jfif";
+
+        }else if (mes == 'Primavera'){
+            texto.innerHTML = "Estação: Primavera";
+            imagem.src = "../img/primavera.jfif";
+
+        }else if (mes == 'Verão'){
+            texto.innerHTML = "Estação: Verão";
+            imagem.src = "../img/verão.jfif";
+
+        }else if (mes == 'Outono'){
+            texto.innerHTML = "Estação: Outono";
+            imagem.src = "../img/outono.jfif";
+
+        }else{
+            texto.innerHTML = "Mês inválido!";
+            imagem.src = "";
+        }
+    }
+
+</script>
+
+<!-- 6. Crie um programa em HTML/JS o qual:
+a) Tenha uma combo com todos os meses do ano;
+b) Após alterar o valor da combo, exiba abaixo dela o nome uma imagem da estação do ano mais provável;
+c) Considere que o clima é no hemisfério norte, ou seja:
+    Primavera: março, abril e maio.
+    Verão: junho, julho e agosto.
+    Outono: setembro, outubro e novembro.
+    Inverno: dezembro, janeiro e fevereiro. -->

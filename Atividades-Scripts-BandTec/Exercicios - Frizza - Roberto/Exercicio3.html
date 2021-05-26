@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite aqui a quantidade de m2 que serão necessários: <input id="qMq"><br>
+    <button onclick="emitir()">Calcular</button><br><br>
+    <span id="texto"></span>
+</body>
+</html>
+
+<script>
+    function emitir(){
+        var metrosQ = Number(qMq.value);
+        var gramaE = Number(metrosQ * 9.70);
+        var gramaB = Number(metrosQ * 8.70);
+        var gramaSc = Number(metrosQ * 10.70);
+
+        texto.innerHTML = `Para ${metrosQ} m2 de grama, nosso orçamento é:<br><br>
+                           grama esmeralda = R$ ${gramaE},  frete = R$ 150,00,  valor total = R$ ${gramaE + 150}<br> 
+                           grama batatais = R$ ${gramaB},  frete = R$ 200,00,  valor total = R$ ${gramaB + 200}<br>
+                           grama São Carlos = R$ ${gramaSc},  frete = R$ 100,00,  valor total = R$ ${gramaSc + 100}<br>`;
+    }
+</script>
+
+
+<!--3) A Gramario é o lugar certo para o seu jardim, temos: grama esmeralda por R$ 9,70 o m2 com taxa de 
+entrega de R$ 150,00; grama batatais por R$ 8,70 o m2 com taxa de entrega de R$ 200,00; e grama São Carlos 
+por R$10,70 o m2 com taxa de entrega de R$ 100,00. Construa um programa em HTML/JS para confecção de orçamentos 
+sendo: 
+
+1. Solicite a quantidade de m2 de grama que serão necessários 
+2. Emita na tela o seguinte orçamento: 
+
+Para xxx m2 de grama, nosso orçamento é: 
+
+grama esmeralda = R$ xxx,xx,  frete = R$ 150,00,  valor total = R$ yyyy,yy 
+
+grama batatais = R$ xxx,xx,  frete = R$ 200,00,  valor total = R$ yyyy,yy 
+grama São Carlos = R$ xxx,xx,  frete = R$ 100,00,  valor total = R$ yyyy,yy -->

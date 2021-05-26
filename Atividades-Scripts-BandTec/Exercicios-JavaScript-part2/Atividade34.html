@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Por quantos minutos você deixou o arroz cozinhando: <input id="tempo_cozinhando">
+    <br>
+    <button onclick="provar()">Provar Arroz</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+    <img id="imagem">
+</body>
+</html>
+
+<script>
+    function provar() {
+        var tempoCozinhando = Number(tempo_cozinhando.value);
+
+        if (tempoCozinhando == 5) {
+            texto.innerHTML = "Parabéns! Arroz perfeito!";
+            imagem.src = "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg";
+        } else {
+            texto.innerHTML = "Arroz cru ou cozido demais!";
+            imagem.src = "https://i.ytimg.com/vi/qP-wewJcny0/maxresdefault.jpg";
+        }
+    }
+</script>

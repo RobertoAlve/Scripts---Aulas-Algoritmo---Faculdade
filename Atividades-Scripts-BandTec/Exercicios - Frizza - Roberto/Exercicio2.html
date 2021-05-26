@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de lâmpadas: <input id="lamp"><br>
+    Digite o valor da sua conta de energia: <input id="contE"><br>
+    <button onclick="cont()">Calcular</button><br><br>
+    <span id="texto"></span>
+</body>
+</html>
+
+<script>
+    function cont(){
+        var vLamp = Number(lamp.value * 20);
+        var pcontE = Number(contE.value * 0.1);
+        var invR = vLamp / pcontE;
+        
+        texto.innerHTML = `O seu investimento em lâmpadas será de R$ ${vLamp}<br>
+                           A sua economia na conta de luz será de R$ ${pcontE}<br>
+                           Portanto, em ${invR} meses o seu investimento será retornado.`;
+}
+</script>
+<!--A Luzdia está representando uma solução de iluminação que promete, com lâmpadas de última geração, reduzir 
+em 10% a conta de luz e melhorar a luminosidades dos ambientes onde elas são instaladas. Sabendo que cada 
+lâmpada custa em média R$ 20,00, construa um programa em HTML/JS que demonstre o retorno do investimento da 
+seguinte forma: 
+
+Solicite a quantidade de lâmpadas necessárias 
+Solicite o valor médio da conta de luz 
+Mostre as seguintes mensagens na tela: 
+O seu investimento em lâmpadas será de R$ xx,xx 
+A sua economia na conta de luz será de R$ zz,zz 
+Portanto, em yy meses o seu investimento será retornado. 
+Onde yy é o quociente da divisão de xx,xx por zz,zz -->

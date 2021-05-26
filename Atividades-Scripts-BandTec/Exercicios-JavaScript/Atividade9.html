@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="height: 100%; width: 100%">
+    Digite a quantidade de votos do Zé Buduia: <input id="qvB">
+    <br>
+    Digite a quantidade de votos do Maria Bigodenha: <input id="qvM">
+    <br>
+    Digite a quantidade de votos Brancos: <input id="qvBr">
+    <br>
+    Digite a quantidade de votos Nulos: <input id="qvN">
+    <br>
+    <br>
+    <button onclick="resultado()">Resultado da Eleição</button>
+    <br>
+    <span id="zeR"></span>
+    <div id="ze" style="height: 30px;"></div>
+    <br>
+    <span id="maB"></span>
+    <div id="ma" style="height: 30px;"></div>
+    <br>
+    <span id="inva"></span>
+    <div id="invL" style="height: 30px;"></div>
+</body>
+
+</html>
+
+<script>
+    function resultado() {
+        var soma_total = Number(qvB.value) + Number(qvM.value) + Number(qvBr.value) + Number(qvN.value);
+        var porZ = Number(qvB.value) * 100 / soma_total;
+        var porM = Number(qvM.value) * 100 / soma_total;
+        var inv = Number(qvBr.value) + Number(qvN.value);
+        var porI = inv * 100 / soma_total;
+        zeR.innerHTML = `<br><b>Valor total: </b>${soma_total} votos<br><br><b>Zé Ruela: </b>${porZ}% (${qvB.value} votos)`;
+        maB.innerHTML = `<b>Maria Bigodenha: </b>${porM}% (${qvM.value} votos)`;
+        inva.innerHTML = `<b>Inválidos: </b> ${porI}% (${inv} votos)`;
+        ze.style.backgroundColor = "green";
+        ze.style.width = `${porZ}%`;
+        ma.style.backgroundColor = "red";
+        ma.style.width = `${porM}%`;
+        invL.style.backgroundColor = "gray";
+        invL.style.width = `${porI}%`;
+    }
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="" id="frequentador_a">
+        <option value="0">Não irei neste fim de semana</option>
+        <option value="1">Irei neste fim de semana</option>
+    </select>
+    <br>
+    <select name="" id="frequentador_b">
+        <option value="0">Não irei neste fim de semana</option>
+        <option value="1">Irei neste fim de semana</option>
+    </select>
+    <br>
+    <button onclick="checarAglomeracao()">Checar aglomeração</button>
+    <br>
+    <div id="texto"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function checarAglomeracao() {
+        var frequentadorA = frequentador_a.value;
+        var frequentadorB = frequentador_b.value;
+
+        if (frequentadorA == 1 && frequentadorB == 1){
+            texto.innerHTML = "Risco alto de aglomeração, 100% de ocupação";
+        }else if(frequentadorA == 1 || frequentadorB == 1){
+            texto.innerHTML = "Risco baixo de aglomeração, 50% das pessoas estarão no parque";
+
+        }else{
+            texto.innerHTML = "Risco 0 de aglomeração, perfeito :)";
+        }
+    }
+
+</script>
+
+<!-- 4) A pandemia de COVID-19 nos alertou para o risco de transmissão maior quando estamos nos aglomerando em um ambiente, portanto faça um programa em HTML/JS que irá auxiliar a secretaria de saúde do estado a verificar a ocorrência de aglomeração em dado local:
+
+
+
+a) Tenha uma lista com a intenção de um frequentador (A) do parque ibirapuera:
+
+    a.1) <option value="0">Não irei neste fim de semana</option>
+
+    a.2) <option value="1">Irei neste fim de semana</option>
+
+b) Tenha uma lista com a intenção de um frequentador (B) do parque ibirapuera:
+
+    b.1) <option value="0">Não irei neste fim de semana</option>
+
+    b.2) <option value="1">Irei neste fim de semana</option>
+
+c) Ao clicar em "Checar aglomeração":
+
+    c.1) Informe ao usuário as condições de aglomeração, obedecendo a seguinte regra:
+
+    c.2) Caso um dos dois visitantes do parque decidam ir no fim de semana, informe: "Risco baixo de aglomeração, 50% das pessoas estarão no parque";
+
+    c.2) Caso os dois visitantes decidam ir, informe: "Risco alto de aglomeração, 100% de ocupação";
+
+    c.3) Caso contrário, informe: "Risco 0 de aglomeração, perfeito :)"; -->

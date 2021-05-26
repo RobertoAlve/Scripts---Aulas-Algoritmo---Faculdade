@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o ki base: <input id="ki"><br><br>
+    <span>Transformar em...</span><br>
+    <button onclick="ssj()">SSJ</button>
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button><br><br>
+    <span id="trans"></span>
+</body>
+</html>
+
+<script>
+    function ssj(){
+        var imssj = '<img src="./imagens/ssj.png" style = "float: left; width: 50vh">';
+        var kssj = Number(ki.value) * 50;
+        trans.innerHTML = `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${kssj}<br>${imssj}`;
+    }
+
+    function ssj2(){
+        var imssj2 = '<img src="./imagens/ssj2.png" style = "float: left; width: 50vh">';
+        var kssj = Number(ki.value) * 100;
+        trans.innerHTML = `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${kssj}<br>${imssj2}`;
+    }
+    function ssj3(){
+        var imssj3 = '<img src="./imagens/ssj3.png" style = "float: left; width: 50vh">';
+        var kssj = Number(ki.value) * 200;
+        trans.innerHTML = `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${kssj}<br>${imssj3}`;
+    }
+
+    // A tag <img> também pode ser já adicionada pelo innerHTML
+</script>

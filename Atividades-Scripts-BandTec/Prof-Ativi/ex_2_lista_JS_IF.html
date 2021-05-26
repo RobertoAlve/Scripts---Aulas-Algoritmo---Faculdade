@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantidade de infrações: <input id="input_qtd_infracoes">
+    <br>
+    Valor do carro: <input id="input_valor_carro">
+    <br>
+    <button onclick="calcular_seguro()">Calcular seguro</button>
+</body>
+
+</html>
+
+<script>
+    function calcular_seguro() {
+        var quantidade_infracoes = Number(input_qtd_infracoes.value);
+        var valor_carro = Number(input_valor_carro.value);
+
+        var valor_seguro = valor_carro * 0.015;
+        /* 
+            As palavras ATÉ e A PARTIR são INCLUSIVAS
+            ou seja -> você deve incluir na verificação
+            o valor em questão;
+        */
+        if (quantidade_infracoes < 3) {
+            valor_seguro = valor_seguro * 0.9;
+        }
+
+        alert(`O valor do seu seguro será: R$${valor_seguro}`);
+    }
+</script>

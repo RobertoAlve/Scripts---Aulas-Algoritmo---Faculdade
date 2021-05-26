@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Qual a nota da avaliação: <input id="nota_avaliacao">
+    <br>
+    <button onclick="avaliar()">Avaliar</button>
+    <br>
+    <br>
+    <img id="imagem">
+
+</body>
+
+</html>
+
+<script>
+
+    function avaliar() {
+        var notaAvaliacao = Number(nota_avaliacao.value);
+
+        if (notaAvaliacao < 0 || notaAvaliacao > 5) {
+            alert("Digite de 0 a 5");
+
+        } else if (notaAvaliacao < 0.5) {
+            imagem.src = "../img/estrelas/5 estrelas cinzas .png";
+
+        } else if (notaAvaliacao >= 0.5 && notaAvaliacao < 1) {
+            imagem.src = "../img/estrelas/meia estrela.png";
+
+        } else if (notaAvaliacao >= 1 && notaAvaliacao < 1.5) {
+            imagem.src = "../img/estrelas/1 estrela.png";
+
+        } else if (notaAvaliacao >= 1.5 && notaAvaliacao < 2) {
+            imagem.src = "../img/estrelas/1 estrela e meia.png";
+
+        } else if (notaAvaliacao >= 2 && notaAvaliacao < 2.5) {
+            imagem.src = "../img/estrelas/2 estrelas.png";
+
+        } else if (notaAvaliacao >= 2.5 && notaAvaliacao < 3) {
+            imagem.src = "../img/estrelas/2 estrelas e meia.png";
+
+        } else if (notaAvaliacao >= 3 && notaAvaliacao < 3.5) {
+            imagem.src = "../img/estrelas/3 estrelas.png";
+
+        } else if (notaAvaliacao >= 3.5 && notaAvaliacao < 4) {
+            imagem.src = "../img/estrelas/3 estrelas e meia.png";
+
+        } else if (notaAvaliacao >= 4 && notaAvaliacao < 4.5) {
+            imagem.src = "../img/estrelas/4 estrelas.png";
+
+        } else if (notaAvaliacao >= 4.5 && notaAvaliacao < 5) {
+            imagem.src = "../img/estrelas/4 estrelas e meia.png";
+
+        } else {
+            imagem.src = "../img/estrelas/5 estrelas douradas.png";
+
+        }
+    }
+
+</script>
+
+<!-- 9 (desafio). Solicite a nota da avaliação de um atendente e dê um feedback bem lúdico conforme segue.
+a) Solicite a nota da avaliação
+b) Ao clicar em "Avaliar", verifique se a avaliação está entre 0 e 5. Caso não estiver, exiba um alert "Nota inválida. Digite de 0 a 5", 
+caso contrário, siga para o item c)
+c) Exiba uma certa quantidade de "estrelinhas amarelas" conforme a nota dada:
+    5 estrelas cinzas, lado a lado, caso a nota for menor que 0.5
+    "meia" estrela amarela, meia estrela cinza e 4 estrelas cinzas, lado a lado, caso a nota for entre 0.5 e menor que 1
+    uma estrela amarela, e 4 estrelas cinzas, lado a lado, caso a nota for entre 1 e menor que 1.5
+    E assim por diante, até a última possibilidade que é...
+    5 estrelas amarelas, lado a lado, caso a nota for exatamente 5 -->

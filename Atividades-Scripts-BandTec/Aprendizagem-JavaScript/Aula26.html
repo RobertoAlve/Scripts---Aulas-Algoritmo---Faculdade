@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="filosofar()">Filosofar</button>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+    function filosofar() {
+        let frase = "Tive que vender meu carro e minha guitarra!<br>";
+        for (let i = 0; i < 7; i++) {
+            texto.innerHTML += frase;
+        } 
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Digite um número qualquer: <input id="numero">
+    <br>
+    <button onclick="raizQuadrada()">Exibir sua raiz quadrada</button>
+    <br>
+    <button onclick="raizCubica()">Exiba sua raiz cúbica</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+
+    var numeroAleatorio = 0;
+
+    function raizQuadrada() {
+        numeroAleatorio = Number(numero.value);
+        var raizQ = numeroAleatorio ** (1/2);
+        // var raizQ = Math.sqrt(numeroAleatorio);
+
+        texto.innerHTML = `Raiz quadrada igual a: ${raizQ}`;
+    }
+
+    function raizCubica() {
+        numeroAleatorio = Number(numero.value);
+        var raizC = numeroAleatorio ** (1/3);
+        // var raizC = Math.cbrt(numeroAleatorio);
+
+        texto.innerHTML += `<br>Raiz cúbica é: ${raizC}`;
+    }
+</script>

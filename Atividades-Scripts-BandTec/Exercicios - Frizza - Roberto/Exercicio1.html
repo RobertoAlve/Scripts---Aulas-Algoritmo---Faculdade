@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de metros de cano a ser usado: <input id="metros" placeholder="Metros que será usado";>
+    <br>
+    <button onclick="soma()">Calcular orçamento</button>
+    <br><br>
+    <span id="texto"></span>
+</body>
+</html>
+
+<script>
+    function soma(){
+        var vmN = Number(metros.value * 10 + 50);
+        var vmR = Number(metros.value * 9.80 + 600);
+        var dif = vmN - vmR;
+        
+        texto.innerHTML = `1.O serviço pela Ni<b>canor</b> sai por R$ ${vmN}<br>
+                           2.O serviço pela Rotirute sai por R$ ${vmR}<br>
+                           3.A diferença dos valores é de R$ ${dif}`;
+    }
+</script>

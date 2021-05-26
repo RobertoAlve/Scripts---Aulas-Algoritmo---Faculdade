@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o valor da passagem: <input id="passagem"><br>
+    Quantas viagens você faz por mês <input id="viagens"><br>
+    Quantos kilômetros é do seu trabalho até sua casa <input id="dista"><br><br>
+    <button onclick="vt()">Calcular VT</button><br><br>
+    <span id="tex"></span>
+</body>
+</html>
+
+<script>
+    function vt(){
+        var tv_app = Number(viagens.value) * 0.1;
+        var tv_oni = Number(viagens.value) * 0.9;
+        var toO = Number(passagem.value) * tv_oni;
+        var tk_app = Number(dista.value) * 0.75;
+        var toA = tv_app * tk_app;
+        var total = toO + toA;
+        tex.innerHTML = `Você vai gastar R$ ${total} com transporte por mês`;
+    }
+</script>

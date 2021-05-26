@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Primeiro Número: <input id="input_pn">
+    <br>
+    Segundo Número: <input id="input_sn">
+    <br><br>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="somar()">Somar</button>
+    <button onclick="potencia()">Potência</button>
+</body>
+
+</html>
+
+<script>
+    function multiplicar(){
+        var pN = Number(input_pn.value);
+        var sN = Number(input_sn.value);
+        alert(`A multiplicação de ${pN} vezes ${sN} é ${pN * sN}`)
+    }
+
+    function dividir(){
+        var pN = Number(input_pn.value);
+        var sN = Number(input_sn.value);
+        alert(`A divisão de ${pN} e ${sN} é ${pN / sN}`);
+    }
+
+    function subtrair(){
+        var pN = Number(input_pn.value);
+        var sN = Number(input_sn.value);
+        alert(`A subtração de ${pN} e ${sN} é ${pN - sN}`);
+    }
+
+    function somar(){
+        var pN = Number(input_pn.value);
+        var sN = Number(input_sn.value);
+        alert(`A soma de ${pN} e ${sN} é ${pN + sN}`);
+    }
+
+    function potencia(){
+        var pN = Number(input_pn.value);
+        var sN = Number(input_sn.value);
+        alert(`A potência de ${pN} por ${sN} é ${pN ** sN}`);
+        // Math.pow(pN, sN)
+    }
+</script>

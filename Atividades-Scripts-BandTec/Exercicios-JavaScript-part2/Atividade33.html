@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a temperatura do ambiente: <input id="in_temperatura">
+    <br>
+    <button onclick="verificar()">Verificar clima</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+    function verificar() {
+        var temperatura = Number(in_temperatura.value);
+        var Alimentoestragado = '<img src="https://www.saboravida.com.br/wp-content/uploads/2018/09/alimento-estragado.jpg">';
+        var AlimentobomEstado = '<img src="https://conteudo.imguol.com.br/c/entretenimento/ab/2017/12/14/enlatados-processados-1513286162745_v2_450x337.jpg">';
+
+        if (temperatura < 10) {
+            texto.innerHTML = `O clima está apropriado para conservar alimento<br>
+                               ${AlimentobomEstado}`;
+        } else {
+            texto.innerHTML = `O clima está inapropriada para conservar alimento<br>
+                               ${Alimentoestragado}`;
+        }
+    }
+</script>

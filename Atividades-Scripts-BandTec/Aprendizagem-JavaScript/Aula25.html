@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite sua frase aqui: <input type="text" id="input_frase">
+    <br>
+    <button onclick="frase()">Repetir frase (X10)</button>
+    <br>
+    <div id="texto"></div>
+</body>
+
+</html>
+
+<script>
+    function frase() {
+        var i = 0;
+        while (i < 10) {
+            texto.innerHTML += `${input_frase.value}<br>`;
+            i++;
+        }
+
+        // for (var y = 0; y < 10; y++) {
+        //     texto.innerHTML += `${input_frase.value}<br>`;
+        // }
+    }
+</script>

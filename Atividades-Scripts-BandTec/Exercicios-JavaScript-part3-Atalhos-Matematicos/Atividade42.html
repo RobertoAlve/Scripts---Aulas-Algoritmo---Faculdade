@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o primeiro número: <input id="num_um">
+    <br>
+    Digite o segundo número: <input id="num_dois">
+    <br>
+    <button onclick="raiz()">Calcular raiz</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+    function raiz() {
+        var numUm = Number(num_um.value);
+        var numD = Number(num_dois.value);
+        var raizQ = numUm ** (1/numD);
+
+
+        texto.innerHTML = `A ${numD}ª raiz de ${numUm} dá ${raizQ}`;
+    }
+</script>

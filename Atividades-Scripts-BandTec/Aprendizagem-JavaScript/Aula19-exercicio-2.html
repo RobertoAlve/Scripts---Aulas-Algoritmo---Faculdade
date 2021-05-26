@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="filmes_dc">
+        <option value="Invalido">-</option>
+        <option value="Liga da justiça">Liga da justiça</option>
+        <option value="Aquaman">Aquaman</option>
+        <option value="Batman vs Superman">Batman vs Superman</option>
+    </select>
+
+    <select id="filmes_marvel">
+        <option value="Invalido">-</option>
+        <option value="The Avengers">The Avengers</option>
+        <option value="Iron Man">Iron Man</option>
+        <option value="Black Panther">Black Panther</option>
+    </select>
+
+    <button onclick="verNotas()">Ver notas</button>
+</body>
+</html>
+
+<script>
+
+    function verNotas() {
+        var filmeM = filmes_marvel.value;
+        var filmeD = filmes_dc.value;
+        var notaDC = 0;
+        var notaMarvel = 0;
+
+        if (filmeD == "Liga da justiça"){
+            notaDC = 9;
+        }
+
+        if (filmeD == "Aquaman"){
+            notaDC = 7;
+        }
+
+        if (filmeD == "Batman vs Superman"){
+            notaDC = 6;
+        }
+        if (filmeM == "The Avengers"){
+            notaMarvel = 8;
+        }
+
+        if (filmeM == "Iron Man"){
+            notaMarvel = 9;
+        }
+
+        if (filmeM == "Black Panther"){
+            notaMarvel = 10;
+        }
+        
+        alert(`O filme ${filmeD} tem uma nota de ${notaDC} e o filme ${filmeM} tem uma nota de ${notaMarvel} no IMDB`);
+
+        var notapD = (notaDC * 100) / notaMarvel - 100;
+        var notapM = (notaMarvel * 100) / notaDC - 100;
+
+        if (notaDC > notaMarvel){
+            alert(`O filme ${filmeD} é superior em  ${notapD.toFixed(2)}% do filme ${filmeM}`)
+        }else{
+            alert(`O filme ${filmeM} é superior em  ${notapM.toFixed(2)}% do filme ${filmeD}`)
+        }
+
+    }
+
+</script>
+
+<!-- 2) Crie um programa em HTML/JS o qual:
+
+a) Tenha uma combobox com os melhores filmes da DC;
+b) Tenha uma outra lista com os melhores filmes da Marvel;
+c) Ao selecionar um filme da DC e outro da Marvel e clicar em "Ver notas":
+    c.1) Mostre, em um alert, as notas daqueles filmes no IMDB (pode inventar, não precisa ser a nota real);
+    c.2) Mostre também as opções selecionadas, ex:
+        "O filme X tem uma nota de Y e o filme Z tem uma nota de K no IMDB";
+    c.3) Mostre, em outro alert, em qual porcentagem o filme A é superior ao filme B;
+d) Mostre, na página, uma imagem dos dois filmes selecionados; -->
+
+ <!-- alert(`O filme ${filmeD} tem uma nota de ${notaDc} e o filme ${filmeM} tem uma nota de ${notaMarvel} no IMDB`)
+
+         if (notaDc > notaMarvel){
+             alert(`O filme ${filmeD} é superior em  ${notapD.toFixed(2)}% do filme ${filmeM}`)
+         }else{
+             alert(`O filme ${filmeM} é superior em  ${notapM.toFixed(2)}% do filme ${filmeD}`)
+         } -->

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a nota do aluno: <input id="nota_aluno">
+    <br>
+    <button onclick="classificar()">Classificar Aluno</button> 
+</body>
+</html>
+
+<script>
+
+    function classificar() {
+        var nota = Number(nota_aluno.value);
+
+        //RESOLUÇÃO 1
+        
+        // if (nota < 5){
+        // alert("Aluno precisa de muita ajuda");
+
+        // }
+
+        // if (nota  >= 5 ) {
+        //     if (nota <= 7){
+        //         alert("Aluno na média");
+        //     }
+        // }
+
+        // if (nota > 7){
+        //     if (nota <= 9.5){
+        //         alert("Aluno acima da média");
+        //     }
+        // }
+
+        // if (nota  > 9.5){
+        //     alert("Aluno fora da curva");
+        // }
+        //-------------------------------------------------------------------
+
+        // RESOLUÇÃO 2
+
+        // if (nota < 5){
+        // alert("Aluno precisa de muita ajuda");
+
+        // }else{
+        //     if (nota <= 7){
+        //         alert("Aluno na média");
+        //         }else{
+        //         if (nota <= 9.5){
+        //             alert("Aluno acima da média");
+
+        //          }else{
+        //                 alert("Aluno fora da curva");
+
+        //             }
+        //        }
+        // }
+
+        //-------------------------------------------------------------------
+
+        //RESOLUÇÃO 3
+
+        if (nota < 5) {
+            alert("Aluno precisa de muita ajuda");
+        }else if (nota <= 7){
+            alert("Aluno na média");
+        }else if (nota <= 9.5){
+            alert("Aluno acima da média");
+        }else{
+            alert("Aluno fora da curva");
+        }
+    }
+
+</script>
+
+<!-- HTML/JS o qual:
+a) Solicite a nota do aluno;
+b) Ao clicar em "Classificar aluno":
+ b.1) Exiba uma dessas mensagens num alert:
+      "Aluno precisa de muita ajuda", caso a nota for menor que 5;
+      "Aluno na média", caso a nota for entre 5 até 7;
+      "Aluno na acima da média", caso a nota for maior que 7 até 9.5;
+      "Aluno fora da curva", caso a nota for maior que 9.5; -->

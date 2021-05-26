@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual a sua idade: <input id="in_idade">
+    <br>
+    Qual seu peso: <input id="in_peso">
+    <br>
+    <button onclick="podeBrincar()">Pode brincar?</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+
+</body>
+</html>
+
+<script>
+
+    function podeBrincar() {
+        var idade = Number(in_idade.value);
+        var peso = Number(in_peso.value);
+
+        if ( idade > 15 && peso <= 100){
+            texto.innerHTML ='<span style="color: blue">Você poderá brincar</span>';
+        }else {
+            texto.innerHTML ='<span style="color: red";>Você não poderá brincar</span>';
+        }
+    }
+
+</script>
+
+<!-- 4. Faça uma versão melhorada do programa anterior na qual a frase dizendo que 
+    pode brincar aparece na cor azul e a que não pode na cor vermelha -->

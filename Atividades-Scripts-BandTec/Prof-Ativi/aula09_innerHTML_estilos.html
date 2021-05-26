@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span style="background-color: black; color: yellow;" id="mensagem_exibida">
+    </span>
+    <br>
+    <button onclick="falar_uma_verdade()">Falar uma verdade</button>
+</body>
+
+</html>
+
+<script>
+
+    function falar_uma_verdade() {
+        /*
+            Através do atributo innerHTML conseguimos controlar
+            o que há de conteúdo no corpo do elemento (neste exemplo
+            é uma TAG <span> com id "mensagem_exibida").
+        */
+        mensagem_exibida.innerHTML = "A DC é melhor que a Marvel";
+        /*
+            Todo atributo de TAGs HTML é acessado, através do JS,
+            dessa maneira:
+                
+                id_do_elemento.nome_do_atributo
+
+        */
+        mensagem_exibida.style.color = "white";
+
+        /*
+            Se liga aí: toda propriedade de estilo que tiver hífen
+            em seu nome, no JS perde esse hífen e utilizamos o padrão
+            camelCase ;)
+        */
+        mensagem_exibida.style.backgroundColor = "purple";
+        mensagem_exibida.style.fontSize = "48px";
+    }
+
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Digite o nome do aluno: <input type="text" id="input_nome_aluno">
+    <br>
+    <button onclick="cadastrar()">Cadastrar novo aluno</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+    <br>
+    <br>
+    Pesquisar aluno: <input type="text" id="input_aluno">
+    <br>
+    <button onclick="pesquisar()">Pesquisar aluno</button>
+
+</body>
+
+</html>
+
+<script>
+    let alunos = ["Renan", "Igor", "Felipe"];
+
+    function cadastrar() {
+        let aluno = input_nome_aluno.value;
+        let alunoExite = false;
+
+        for (let contador = 0; contador < alunos.length; contador++) {
+            if (alunos[contador].toLowerCase() == aluno.toLowerCase()) {
+                alunoExite = true;
+            }
+        }
+
+        if (alunoExite) {
+            alert("Aluno já cadastrado!")
+        } else {
+            alunos.push(aluno);
+            texto.innerHTML = "";
+            for (let contador = 0; contador < alunos.length; contador++) {
+                texto.innerHTML += `${alunos[contador]}<br>`;
+            }
+        }
+    }
+
+    function pesquisar() {
+        let aluno = input_aluno.value;
+
+        for (let contador = 0; contador < alunos.length; contador++) {
+            if (alunos[contador] == aluno) {
+                alert(`O aluno ${aluno} já existe na lista`)
+            }
+        }
+    }
+</script>
+
+<!-- 6. Crie um programa em HTML/JS em que:
+
+a) Tenha uma lista de alunos e um botão para cadastrar novos (mostre como a lista está a cada novo aluno inserido).
+
+b) Ao tentar inserir um aluno, verifique se já não existe na lista - caso exista, não insira-o.
+
+c) Tenha um campo para pesquisar alunos, onde o usuário possa verificar se o aluno em questão já existe 
+(se existir, exiba um alert com a frase "O aluno X já existe na lista"). -->

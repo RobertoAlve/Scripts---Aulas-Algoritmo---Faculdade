@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="texto"></div>
+    <br>
+    <div id="texto2"></div>
+    <br>
+    <button onclick="clicaNeu()">Clica neu</button>
+    
+</body>
+</html>
+
+<script>
+
+    var numeroCliks = 0;
+
+    texto.innerHTML = "Você já clicou <b>0</b> vezes";
+    texto2.innerHTML = "Dedo fraquinho, hein";
+
+    function clicaNeu() {
+        numeroCliks++;
+
+        texto.innerHTML = `Você já clicou <b>${numeroCliks}</b> vezes`;
+
+        if (numeroCliks < 5){
+            texto2.innerHTML = "Dedo fraquinho, hein";
+
+        }else if (numeroCliks <= 10){
+            texto2.innerHTML = "Dedo bom, mano";
+
+        }else if (numeroCliks <= 15){
+            texto2.innerHTML = "Gosta de clicar, hein!";
+
+        }else{
+            texto2.innerHTML = "Eita dedo nervoso!";
+            
+        }
+    }
+
+</script>
+
+<!-- 7. Crie um botão para avaliar o quão habilidoso o usuário é nos cliques:
+a) A tela deve ter o texto "Você já clicou 0 vezes";
+b) Ao clicar em "Clica neu", o contador do texto em a) aumenta. De 0 vai pra 1, depois pra 2, depois pra 3 e assim por diante;
+c) Além de atualizar o contador, exiba umas dessas frases abaixo da frase em a)
+   "Dedo fraquinho, hein", enquanto clicou menos de 5 vezes
+   "Dedo bom, mano enquanto clicou entre 5 e 10 vezes
+   "Gosta de clicar, hein!", enquanto clicou entre 11 e 15 vezes
+   "Eita dedo nervoso!", enquanto clicou mais de 15 vezes -->

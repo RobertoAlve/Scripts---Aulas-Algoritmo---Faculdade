@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        img {
+            height: 250px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <button id="botao" onclick="jogo()">Iniciar Jogo</button>
+    <br>
+    <img onclick="scorpion()" id="img1" src="">
+    <div id="barra1"></div>
+    <br>
+    <img onclick="subZero()" id="img2" src="">
+    <div id="barra2"></div>
+    <br>
+    <div id="texto"></div>
+</body>
+
+</html>
+
+<script>
+
+    var vidaScorpion = 100;
+    var vidaSub = 100;
+
+    var golpesJogador1 = 0;
+    var golpesJogador2 = 0;
+
+    var margin = 0;
+
+
+    function jogo() {
+
+        botao.style.display = "none";
+
+        img1.src = "../img/scorpion.png";
+        img2.src = "../img/sub-zero.png";
+
+        barra1.style.width = `${vidaScorpion}%`;
+        barra1.style.height = "30px";
+        barra1.style.backgroundColor = "green";
+
+        barra2.style.widht = `${vidaSub}%`;
+        barra2.style.height = "30px";
+        barra2.style.backgroundColor = "green";
+
+        texto.innerHTML = ` Golpes sofridos pelo lutador 1: 0
+                            <br>Golpes sofridos pelo lutador 2: 0`;
+
+    }
+
+    function scorpion() {
+
+        ++golpesJogador1;
+        vidaScorpion = vidaScorpion - 5;
+
+        texto.innerHTML = ` Golpes sofridos pelo lutador 1: ${golpesJogador1}
+                            <br>Golpes sofridos pelo lutador 2: ${golpesJogador2}`;
+
+        barra1.style.width = `${vidaScorpion}%`;
+
+        if (vidaScorpion <= 30){
+            barra1.style.backgroundColor = "red";
+
+        }else if (vidaScorpion <= 60){
+            barra1.style.backgroundColor = "yellow";
+        }
+
+    }
+
+    function subZero() {
+
+        ++golpesJogador2;
+        vidaSub = vidaSub - 5;
+        margin += 5;
+
+        texto.innerHTML = ` Golpes sofridos pelo lutador 1: ${golpesJogador1}
+                            <br>Golpes sofridos pelo lutador 2: ${golpesJogador2}`;
+
+        barra2.style.width = `${vidaSub}%`;
+        barra2.style.marginLeft = `${margin}%`;
+
+        if (vidaSub <= 30){
+            barra2.style.backgroundColor = "red";
+
+        }else if (vidaSub <= 60){
+            barra2.style.backgroundColor = "yellow";
+        }
+
+}
+
+</script>

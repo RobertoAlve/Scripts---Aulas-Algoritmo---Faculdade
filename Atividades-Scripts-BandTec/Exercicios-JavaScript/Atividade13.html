@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o nome do aluno: <input id="nome"><br>
+    Quantidade de aulas totais do curso: <input id="qAulas"><br>
+    Quantidade de aulas que o Aluno faltou: <input id="qF"><br><br>
+    <button onclick="freq()">Frequência do aluno</button><br><br>
+    <span id="tex"></span>
+    <div id="barra" style="height: 20px;"></div>
+</body>
+</html>
+
+<script>
+    function freq(){
+        var aulasFre = Number(qAulas.value) - Number(qF.value);
+        var freque = aulasFre * 100 / Number(qAulas.value);
+        tex.style.color = "blue";
+        tex.innerHTML = `Olá, ${nome.value}! Sua frequência foi de ${freque} <b style="color: green;">%</b>`;
+        barra.style.backgroundColor = "red";
+        //barra.style.width = freque + "%";
+        barra.style.width = `${freque}%`;
+    }
+</script>

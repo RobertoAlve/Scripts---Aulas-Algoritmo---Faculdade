@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a nota do aluno: <input id="nota_aluno">
+    <br>
+    <button onclick="classificar()">Classificar Aluno</button> 
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+
+    function classificar() {
+        var nota = Number(nota_aluno.value);
+
+        if (nota < 5) {
+            texto.innerHTML = '<span style="color: red;">Aluno precisa de muita ajuda</span>';
+        }else if (nota <= 7){
+            texto.innerHTML = '<span style="color: orange;">Aluno na média</span>';
+        }else if (nota <= 9.5){
+            texto.innerHTML = '<span style="color: green">Aluno acima da média</span>';
+        }else{
+            texto.innerHTML = '<span style="color: blue">Aluno fora da curva</span>';
+        }
+    }
+
+</script>
+
+<!-- 1. Melhore o programa feito em aula de tal forma que:
+a) As mensagens sejam exibidas na própria página, logicamente apenas uma por vez. Sempre abaixo do botão
+b) A primeira mensagem deve estar sempre com o texto na cor vermelha;
+c) A segunda mensagem deve estar sempre com o texto na cor laranja;
+d) A terceira mensagem deve estar sempre com o texto na cor verde;
+e) A quarta mensagem deve estar sempre com o texto na cor azul; -->

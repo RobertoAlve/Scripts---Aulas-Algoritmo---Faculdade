@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos filhos você tem: <input id="qtd_filhos">
+    <br>
+    <button onclick="verificarSituacao()">verificar Situação</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+
+    function verificarSituacao() {
+        var qtdFilhos = Number(qtd_filhos.value);
+
+        if (qtdFilhos == 0) {
+            texto.innerHTML = "Sem antecendentes";
+        }
+
+        if (qtdFilhos == 1) {
+            texto.innerHTML = "Filho Único";;
+        }
+        
+        if (qtdFilhos >= 2) {
+            texto.innerHTML = "Crescei e multiplicai-vos";
+        }
+    }
+</script>

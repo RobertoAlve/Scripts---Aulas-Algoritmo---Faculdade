@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    O que você come de café da manhã:
+    <select id="cafeManha">
+        <option value="-">-</option>
+        <option value="Ovos">ovos</option>
+        <option value="Leite de arroz">Leite de arroz</option>
+        <option value="Bacon">Bacon</option>
+    </select>
+    <br>
+    O que você como no almoço:
+    <select id="almocoDia">
+        <option value="-">-</option>
+        <option value="Bife">Bife</option>
+        <option value="Hamburger de soja">Hamburger de soja</option>
+        <option value="Frango grelhado">Frango grelhado</option>
+    </select>
+    <br>
+    O que você como no jantar:
+    <select id="jantarNoite">
+        <option value="-">-</option>
+        <option value="Picanha de soja">Picanha de soja</option>
+        <option value="Cupim">Cupim</option>
+        <option value="Coração">Coração</option>
+    </select>
+    <br>
+    <button onclick="souVegano()">Sou vegano</button>
+
+</body>
+
+</html>
+
+<script>
+
+    function souVegano() {
+        var cafe = cafeManha.value;
+        var almoco = almocoDia.value;
+        var jantar = jantarNoite.value;
+
+        if (cafe == 'Leite de arroz' && almoco == 'Hamburger de soja' && jantar == 'Picanha de soja') {
+            alert("Sim, você é vegano!");
+        } else {
+            alert("Não, você não é vegano!")
+        }
+    }
+
+</script>
+
+<!-- 7. Crie um programa em HTML/JS que verifique se o usuário é vegano ou não.
+a) Numa combo pergunte o que ele come no café da manhã, tendo as opções
+    ovos
+    leite de arroz
+    bacon
+b) Numa outra combo pergunte o que ele come no almoço, tendo as opções
+    bife
+    hamburger de soja
+    frango grelhado
+c) Numa outra combo pergunte o que ele come na janta, tendo as opções
+    picanha de soja
+    cupim
+    coração
+
+d) Ao clicar no botão "Sou vegano", aparece um alert com uma dessas frases:
+    "Sim, você é vegano!", caso ele consuma leite de arroz no café, hamburger de soja no almoço e picanha de soja na janta
+    "Não, você não é vegano", caso contrário -->

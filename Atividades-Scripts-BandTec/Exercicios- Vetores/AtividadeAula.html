@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    nome aluno: <input type="text" id="inputNomeAluno">
+    <br>
+    <button onclick="cadastrarAluno()">Cadastrar e exibir alunos!</button>
+    <br>
+    <div id="textoAluno"></div>
+    <br>
+    <div id="textoAlunoPares"></div>
+    <br>
+    <div id="textoAlunoInverso"></div>
+</body>
+
+</html>
+
+<script>
+    
+    let listaAlunos = [];
+
+    function cadastrarAluno() {
+        let nomeALuno = inputNomeAluno.value;
+        listaAlunos.push(nomeALuno);
+
+        exibirLista();
+    }
+
+    function exibirLista() {
+        textoAluno.innerHTML = "";
+        for (let contador = 0; contador < listaAlunos.length; contador++) {
+            textoAluno.innerHTML += `${listaAlunos[contador]}<br>`;
+        }
+
+        exibirAlunosPares();
+    }
+
+    function exibirAlunosPares() {
+        textoAlunoPares.innerHTML = "";
+        for (let contador = 0; contador < listaAlunos.length; contador++) {
+            if ((contador + 1) % 2 == 0) {
+                textoAlunoPares.innerHTML += `${listaAlunos[contador]}<br>`;
+            }
+        }
+
+        exibirListaInversa();
+    }
+
+    function exibirListaInversa() {
+        textoAlunoInverso.innerHTML = "";
+        for (let contador = listaAlunos.length - 1; contador >= 0; contador--) {
+            textoAlunoInverso.innerHTML += `${listaAlunos[contador]}<br>`;
+        }
+    }
+
+</script>

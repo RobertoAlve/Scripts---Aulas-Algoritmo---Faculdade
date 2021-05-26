@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #imagem {
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <button onclick="botao1()">Nota 1</button>
+        <button onclick="botao2()">Nota 2</button>
+        <button onclick="botao3()">Nota 3</button>
+        <button onclick="botao4()">Nota 4</button>
+        <button onclick="botao5()">Nota 5</button>
+    </div>
+    <br>
+    <br>
+    <div id="texto"></div>
+    <br>
+    <img id="imagem" src="">
+    
+</body>
+</html>
+
+<script>
+
+    texto.innerHTML = "Sua avaliação:";
+    var clicks = 0;
+    var nota1 = 0;
+    var nota2 = 0;
+    var nota3 = 0;
+    var nota4 = 0;
+    var nota5 = 0;
+
+
+    function botao1() {
+        ++clicks;
+        nota1 += 1;
+        media();
+    }
+
+    function botao2() {
+        ++clicks;
+        nota2 += 2;
+        media();
+    }
+
+    function botao3() {
+        ++clicks;
+        nota3 += 3;
+        media();
+    }
+
+    function botao4() {
+        ++clicks;
+        nota4 += 4;
+        media();
+    }
+
+    function botao5() {
+        ++clicks;
+        nota5 += 5;
+        media();
+    }
+
+    function media() {
+
+        var mediaNotas = (nota1 + nota2 + nota3 + nota4 + nota5) / clicks;
+
+        texto.innerHTML = `Sua avaliação:${mediaNotas.toFixed(2)}`;
+
+        if (mediaNotas < 2){
+            imagem.src = "../img/chorando.jpg";
+
+        }else if (mediaNotas <= 3){
+            imagem.src = "../img/neutro.jpg";
+
+        }else if (mediaNotas <= 4.5){
+            imagem.src = "../img/feliz.png";
+
+        }else{
+            imagem.src = "../img/megafeliz.jpg";
+
+        }
+    }
+
+</script>
+
+<!-- 8 (desafio). Crie um pequeno sistema de avaliação de atendimento em HTML/JS o qual:
+a) Tem cinco botões: "Nota 1", "Nota 2", "Nota 3", "Nota 4" e "Nota 5";
+b) Abaixo deles, um texto: "Sua avaliação:";
+c) Cada vez que o usuário for clicando em um dos botões, é atualizada a média de todas as avaliações recebidas, 
+e o texto em b) se atualiza para algo como "Sua avaliação: 3.4" (use sempre 1 casa decimal);
+d) De acordo com a média atual, exiba ou altere uma figura abaixo de tudo, que pode ser:
+    De alguém chorando ou desesperado, caso a média esteja abaixo de 2.
+    De alguém "neutro", caso a média esteja entre 2 e 3.
+    De alguém feliz, caso a média seja entre mais de 3 e 4.5.
+    De radiante, mega feliz, caso a média esteja acima de 4.5. -->

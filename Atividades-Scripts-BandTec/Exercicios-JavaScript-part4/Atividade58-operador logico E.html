@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Qual a bebida o senhor(a) vai querer:
+    <select name="" id="bebidas">
+        <option value="0">Nenhuma</option>
+        <option value="2.50">Água</option>
+        <option value="4.50">Refrigerante</option>
+        <option value="6.50">Cerveja</option>
+    </select>
+    <br>
+
+    Qual a refeição o senhor(a) vai querer:
+    <select name="" id="refeicoes">
+        <option value="2.50">Salada</option>
+        <option value="8">Feijoada</option>
+        <option value="12.50">Bife a Cavalo</option>
+        <option value="13">Peixe Frito</option>
+    </select>
+    <br>
+    <br>
+
+    Qual o seu nome: <input id="in_nome">
+    <br>
+    <button onclick="calcularTotal()">Calcular total a pagar</button>
+    <br>
+    <br>
+
+    <div id="texto"></div>
+</body>
+
+</html>
+
+<script>
+
+    function calcularTotal() {
+        var bebida = Number(bebidas.value);
+        var refeicao = Number(refeicoes.value);
+        var nome = in_nome.value;
+        var valorTotal = bebida + refeicao;
+
+        texto.innerHTML = `Olá, ${nome}. Seu almoço vai custar um total de R$${valorTotal.toFixed(2)}`;
+    }
+
+</script>
+
+<!-- 1. Crie um programa em HTML/JS o qual:
+a) Solicite a "Bebida" que o usuário vai consumir, dentre as seguintes opções:
+   Nenhuma, Água, Refrigerante, Cerveja
+   Defina o preço que quiser para cada um desses itens
+   
+b) Solicite a "Refeição" que o usuário vai consumir, dentre as seguintes opções:
+   Salada, Feijoada, Bife a Cavalo, Peixe Frito
+   Defina o preço que quiser para cada um desses itens
+   
+c) Solicite o nome do usuário   
+
+d) Ao clicar num botão "Calcular total a pagar", exiba na própria página uma frase como esta:
+   
+   Olá, NOME. Seu almoço vai custar um total de R$TOTAL
+   
+Onde NOME é o valor informado em c) e TOTAL é a soma do valor da bebida do item a) com o valor da refeição do item b)    -->

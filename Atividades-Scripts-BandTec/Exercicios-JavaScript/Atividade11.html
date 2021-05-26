@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o sabor da pizza: <input id="sabor"><br>
+    Qual o valor da pizza: <input id="val"><br>
+    Quantas pessoas vão comer: <input id="pess"><br>
+    <button onclick="pag()">Ver valor pago por amigo</button><br>
+    <span id="tex"></span>
+</body>
+</html>
+
+<script>
+    function pag(){
+        var porP = Number(val.value) * 0.1;
+        var total = porP + Number(val.value);
+        var cont = total / Number(pess.value);
+        tex.innerHTML = `Cada amigo vai colaborar com R$ ${cont} para a pizza de ${sabor.value}`;
+    }
+</script>

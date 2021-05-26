@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o seu nome: <input id="nome" placeholder="Digite aqui seu nome completo"><br>
+    Onde você mora: <input id="endereco" placeholder="Digite aqui seu endereço"><br>
+    Quando vecê nasceu: <input id="date" placeholder="Digite aqui sua data de nascimento"><br>
+    <button onclick="formu()">Formulário</button><br><br>
+    <span id="texto"></span>
+</body>
+</html>
+
+<script>
+    function formu(){
+        texto.innerHTML = `Nome: ${nome.value}<br>
+                           Endereço: ${endereco.value}<br>
+                           Data de nascimento: ${date.value}`;
+    }
+</script>

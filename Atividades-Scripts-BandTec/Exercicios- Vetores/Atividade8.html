@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Digite a nota do aluno: <input type="text" id="input_nota_aluno">
+    <br>
+    Campo 1: <input type="text" id="input_campo_um">
+    <br>
+    Campo 2: <input type="text" id="input_campo_dois">
+    <br>
+    <button onclick="cadastrarNota()">Cadastrar nota</button>
+    <button onclick="reverNotas()">Rever as Notas</button>
+    <div id="texto"></div>
+</body>
+
+</html>
+
+<script>
+    let notas = [];
+    let notasEncontradasLista = [];
+
+    function cadastrarNota() {
+        let notaAluno = Number(input_nota_aluno.value);
+        notas.push(notaAluno);
+    }
+
+    function reverNotas() {
+        let campoUm = Number(input_campo_um.value);
+        let campoDois = Number(input_campo_dois.value)
+        let notasEncontradas = 0;
+        let somaNotas = 0;
+        let mediaFinal = 0;
+
+        texto.innerHTML = "";
+        for (let contador = 0; contador < notas.length; contador++) {
+            if (notas[contador] >= campoUm && notas[contador] <= campoDois) {
+                notasEncontradas++;
+                notasEncontradasLista.push(notas[contador]);
+
+            }
+        }
+
+        for (let contador = 0; contador < notasEncontradasLista.length; contador++) {
+            mediaNotas += notasEncontradasLista[contador];
+        }
+
+        mediaFinal = somaNotas / notasEncontradasLista.length;
+
+        alert(`Foram cadastras ${notasEncontradas} notas que estão no intervalo de  ${campoUm} até ${campoDois} e a média dessas notas é ${mediaFinal.toFixed(1)}`);
+    }
+
+</script>
+
+<!-- 8. 
+
+a) Crie um programa onde o usuário vá cadastrando a nota dos alunos. Ele digita a nota e clica em "Cadastrar Nota".
+
+b) Deve haver outros dois campos, onde ele digita dois números, indicando o intervalo de notas que ele quer analisar, e clica em "Rever as notas".
+
+c) O programa deve mostrar todas as notas cadastradas que estão no intervalo informado no item b).
+
+d) Ao final emitir a seguinte mensagem: “Foram cadastras XX notas que estão no intervalo de  YY até ZZ e a média dessas notas é MM,M”, -->

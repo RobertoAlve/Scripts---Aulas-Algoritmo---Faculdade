@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Digite a frase aqui: <input type="text" id="input_frase">
+    <br>
+    Quantidade de repeticoes: <input type="text" id="repeticoes">
+    <br>
+    <button onclick="frase()">Repetir frase</button>
+    <div id="texto"></div>
+
+</body>
+
+</html>
+
+<script>
+    function frase() {
+        let i = 0;
+        let frase = input_frase.value;
+        let repetir = Number(repeticoes.value);
+
+        if (repetir >= 1) {
+            while (i < repetir) {
+                texto.innerHTML += `${frase}<br>`;
+                i++;
+            }
+        } else {
+            alert("Quantidade inválida!");
+        }
+    }
+</script>
+
+<!-- 3. Faça uma versão melhorada do programa anterior no qual:
+a) O usuário informa a quantidade de vezes que quer que a frase repita
+b) Se a quantidade não for informada ou se for menor que 0, exiba um alert "Quantidade inválida" e, claro, não exiba a frase na tela -->

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Quantos pães franceses você come por dia: <input id="paes_franceses">
+    <br>
+    Quantos pacotes de bolacha você como por dia: <input id="pacotes_bolacha">
+    <br>
+    Quantos copos de achocolatado você toma por dia: <input id="copos_achocolatado">
+    <br>
+    <button onclick="verificarCalorias()">Verificar calorias</button>
+    <br>
+    <br>
+    <div id="texto"></div>
+    <br>
+    <img style="height: 500px" id="imagem" src="">
+
+</body>
+</html>
+
+<script>
+
+    function verificarCalorias() {
+        var paesCalorias = Number(paes_franceses.value) * 50;
+        var bolachaCalorias = Number(pacotes_bolacha.value) * 80;
+        var achocolatadoCalorias = Number(copos_achocolatado.value) * 70;
+        var totalCalorias = paesCalorias + bolachaCalorias + achocolatadoCalorias;
+
+        if (totalCalorias < 200){
+            texto.innerHTML = "Parabéns, vai sair em forma da quarentena!";
+            imagem.src = "https://boaforma.abril.com.br/wp-content/uploads/sites/2/2017/06/lana-pessoa.jpg";
+    
+        }else if (totalCalorias <= 400){
+            texto.innerHTML = "Cuidado, vai ficar mais fofinho(a)";
+            imagem.src = "https://www.rosaliapadovani.com.br/wp-content/uploads/2017/11/excesso-de-peso-gordura-1017-1400x800.jpg";
+
+        }else{
+            texto.innerHTML = "Bom, acho que muitos não vão te reconhecer após a quarentena";
+            imagem.src = "https://veja.abril.com.br/wp-content/uploads/2016/05/sobrepeso-20143101-original1.jpeg";
+        }
+
+    }
+
+</script>
+
+<!-- 5. Melhore o programa da questão anterior de tal forma que:
+a) No caso da primeira mensagem, apareça também na tela a imagem de uma pessoa em forma;
+b) No caso da segunda mensagem, apareça também na tela a imagem de uma pessoa levemente acima do peso ideal;
+c) No caso da terceira mensagem, apareça também na tela a imagem de uma pessoa bem acima do peso ideal; -->

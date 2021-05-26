@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Frase: <input id="in_frase" onkeyup="transformacoes()">
+    <br>
+    Primeira letra: <span id="primeira_letra"></span>
+    <br>
+    Ultima letra: <span id="ultima_letra"></span>
+    <br> 
+    Email válido: <span id="tem_a"></span>
+    <br>
+    Começa com a?: <span id="comeca_certo"></span>
+    <br>
+    Termina com .com.br?: <span id="email_certo">Não</span>
+    <br>
+    Frase, minuscula: <span id="frase_min"></span>
+    <br>
+    Frase, maiuscula: <span id="frase_maisc"></span>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function transformacoes() {
+        var frase = in_frase.value;
+        primeira_letra.innerHTML = frase[0];
+        ultima_letra.innerHTML = frase[frase.length - 1];
+
+        if (frase.indexOf("@") > -1 && frase.indexOf(".") > -1){
+            tem_a.innerHTML = "Sim";
+        }else{
+            tem_a.innerHTML = "Não";
+        }
+
+        if (frase.startsWith("a")){
+            comeca_certo.innerHTML = "Sim";
+        }else{
+            comeca_certo.innerHTML = "Não";
+        }
+
+        if (frase.endsWith(".com.br")){
+            email_certo.innerHTML = "Sim";
+        }else{
+            email_certo.innerHTML = "Não";
+        }
+
+        frase_min.innerHTML = frase.toLowerCase();
+        frase_maisc.innerHTML = frase.toUpperCase();
+
+        // var fraseComecaComA = frase.startsWith("a");
+        // if(fraseComecaComA) {
+        //     span_comeca_correto.innerHTML = "Sim";
+        // } else {
+        //     span_comeca_correto.innerHTML = "Não";
+        // }
+
+        // var fraseTerminaComPontoComBR = frase.endsWith(".com.br");
+        // if(fraseTerminaComPontoComBR) {
+        //     span_termina_correto.innerHTML = "Sim";
+        // } else {
+        //     span_termina_correto.innerHTML = "Não";
+        // }
+
+
+    }
+
+</script>

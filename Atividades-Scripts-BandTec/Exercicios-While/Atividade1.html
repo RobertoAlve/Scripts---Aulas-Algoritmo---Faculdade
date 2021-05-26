@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="filo()">Repetir frase</button>
+    <div id="texto"></div>
+</body>
+</html>
+
+<script>
+    function filo() {
+        let i = 0;
+        while (i < 7) {
+            texto.innerHTML += "A vida não é um problema a ser resolvido, mas uma realidade a ser experimentada.<br>";
+            i++;
+        }
+    }
+</script>
+
+<!-- 1. Crie um programa o qual:
+a) Ao clicar num botão 'Filosofar' exibe na própria página (NÃO num alert) 7 vezes, uma embaixo da outra,
+ uma frase filosófica qualquer -->

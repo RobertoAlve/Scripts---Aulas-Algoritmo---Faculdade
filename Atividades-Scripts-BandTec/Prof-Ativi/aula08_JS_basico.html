@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- O atributo "onclick" é o responsável por invocar, chamar, executar a nossa
+    função no clique do botão. -->
+    <button onclick="meuSegundoPrograma()">Clique em mim</button>
+</body>
+
+</html>
+
+<script>
+
+    /* 
+        Padrões de nomenclatura:
+            "_" -> snake_case
+            "aA" -> camelCase
+            "palavra1-palavra2" -> kebab-case
+    */
+
+    /* 
+        Não utilizar em nomes de função:
+            Caracter "espaço"
+            Começar com 1° letra maiúscula
+            kebab-case
+    */
+
+    /*
+        Uma função é delimitada, ou seja, tem seus limites
+        entre a abertura de chaves "{" e o fechamento "}".
+        Tudo que vem antes e tudo que vem depois dela não
+        pertencem a ela.
+    */
+    function meuPrimeiroPrograma() {
+        document.title = "É nóis no JS";
+    }
+
+    function meuSegundoPrograma() {
+        alert("Vou chamar a função meuPrimeiroPrograma");
+        meuPrimeiroPrograma();
+    }
+
+</script>

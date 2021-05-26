@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="oitoPassagens()">08 passagens</button>
+    <button onclick="vintePassagens()">20 passagens</button>
+    <button onclick="cinquentaPassagens()">50 passagens</button>
+</body>
+
+</html>
+<script>
+
+    function oitoPassagens() {
+        var custoDesconto = 32.45;
+        var custoNormal = 35.20;
+        var porcentagem = (1 - (custoDesconto / custoNormal)) * 100;
+        var ganho = (custoNormal - custoDesconto) / 4.40;
+
+
+        alert(`Ao comprar 8 passagens, você pagou ${porcentagem.toFixed(2)}% a menos. É como se tivesse ganhado ${ganho.toFixed(1)} passagens de bônus`);
+    }
+
+    function vintePassagens() {
+        var custoDesconto = 78.65;
+        var custoNormal = 88;
+        var porcentagem = (1 - (custoDesconto / custoNormal)) * 100;
+        var ganho = (custoNormal - custoDesconto) / 4.40;
+
+
+        alert(`Ao comprar 20 passagens, você pagou ${porcentagem.toFixed(2)}% a menos. É como se tivesse ganhado ${ganho.toFixed(1)} passagens de bônus`);
+    }
+
+    function cinquentaPassagens() {
+        var custoDesconto = 191.41;
+        var custoNormal = 220;
+        var porcentagem = (1 - (custoDesconto / custoNormal)) * 100;
+        var ganho = (custoNormal - custoDesconto) / 4.40;
+
+
+        alert(`Ao comprar 50 passagens, você pagou ${porcentagem.toFixed(2)}% a menos. É como se tivesse ganhado ${ganho.toFixed(1)} passagens de bônus`);
+    }
+
+</script>
